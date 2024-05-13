@@ -6,7 +6,7 @@ public class Order {
     private String clientId;
     private String instrumentId;
     private String side;
-    private Double price;
+    private Double orderPrice;
     private Double quantity;
 
     Order(String orderId, LocalTime time, String clientId, String instrumentId, String side, double price,
@@ -42,10 +42,38 @@ public class Order {
     }
 
     private void setPrice(double price) {
-        this.price = price;
+        this.orderPrice = price;
     }
 
     private void setQuantity(double quantity) {
         this.quantity = quantity;
+    }
+
+    public String getOrderId() {
+        return orderId;
+    }
+
+    public LocalTime getOrderTime() {
+        return orderTime;
+    }
+
+    public String getClientId() {
+        return clientId;
+    }
+
+    public String getInstrumentId() {
+        return instrumentId;
+    }
+
+    public String getSide() {
+        return side;
+    }
+
+    public double getOrderPrice() {
+        return orderPrice;
+    }
+
+    public double getQuantity() {
+        return quantity;
     }
 }

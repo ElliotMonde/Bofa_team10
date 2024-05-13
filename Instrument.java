@@ -1,9 +1,10 @@
 public class Instrument {
-    public String instrumentId;
-    public String instrumentCurrency;
-    public int lotSize;
+    private String instrumentId;
+    private String instrumentCurrency;
+    private int lotSize;
+    private double currentPrice;
 
-    Instrument(String instrumentId, String currency, int lotSize) {
+    public Instrument(String instrumentId, String currency, int lotSize) {
         setInstrumentId(instrumentId);
         setCurrency(currency);
         setLotSize(lotSize);
@@ -20,4 +21,25 @@ public class Instrument {
     private void setLotSize(int lotSize) {
         this.lotSize = lotSize;
     }
+
+    public void setInstrumentPrice(double currentPrice) {
+        this.currentPrice = currentPrice;
+    }
+
+    public double getCurrentPrice() {
+        return currentPrice;
+    }
+
+    public int getLotSize() {
+        return lotSize;
+    }
+
+    public String getInstrumentCurrency() {
+        return instrumentCurrency;
+    }
+
+    public String getInstrumentId() {
+        return instrumentId;
+    }
+
 }
