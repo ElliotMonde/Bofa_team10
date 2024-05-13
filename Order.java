@@ -9,7 +9,7 @@ public class Order {
     private Double orderPrice;
     private Double quantity;
 
-    Order(String orderId, LocalTime time, String clientId, String instrumentId, String side, double price,
+    Order(String orderId, LocalTime time, String clientId, String instrumentId, String side, String price,
             double quantity) {
         setOrderId(orderId);
         setOrderTime(time);
@@ -20,12 +20,12 @@ public class Order {
         setQuantity(quantity);
 
     }
-    
-    private void setOrderId(String orderId){
+
+    private void setOrderId(String orderId) {
         this.orderId = orderId;
     }
 
-    private void setOrderTime(LocalTime time){
+    private void setOrderTime(LocalTime time) {
         this.orderTime = time;
     }
 
@@ -41,8 +41,12 @@ public class Order {
         this.side = side;
     }
 
-    private void setPrice(double price) {
-        this.orderPrice = price;
+    private void setPrice(String priceString) {
+        if (priceString.equals("Market")){
+            //TODO: get market price of instrument using instrument id and getCurrentPrice method
+        }else{
+            this.orderPrice = Double.parseDouble(priceString);
+        }
     }
 
     private void setQuantity(double quantity) {
