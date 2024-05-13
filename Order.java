@@ -8,6 +8,7 @@ public class Order {
     private String side;
     private Double orderPrice;
     private Double quantity;
+    private String rejectionReason;
 
     Order(String orderId, LocalTime time, String clientId, String instrumentId, String side, String price,
             double quantity) {
@@ -18,6 +19,7 @@ public class Order {
         setSide(side);
         setPrice(price);
         setQuantity(quantity);
+        rejectionReason = "";
 
     }
 
@@ -79,5 +81,8 @@ public class Order {
 
     public double getQuantity() {
         return quantity;
+    }
+    public void setRejection(String rejectionReason){
+        this.rejectionReason = rejectionReason;
     }
 }
