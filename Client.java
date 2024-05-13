@@ -1,20 +1,20 @@
 import java.util.ArrayList; 
 
 public class Client {
-    private int clientId;
+    private String clientId;
     private ArrayList<String> currencies;
     private boolean checkFlag;
     private int rating;
     private ArrayList<Order> orders;
 
-    Client(int clientId, ArrayList<String> currencies, boolean checkFlag, int rating) {
+    Client(String clientId, ArrayList<String> currencies, boolean checkFlag, int rating) {
         setClientId(clientId);
         setCurrencies(currencies);
         setCheckFlag(checkFlag);
         setRating(rating);
     }
 
-    void setClientId(int clientId) {
+    void setClientId(String clientId) {
         this.clientId = clientId;
     }
 
@@ -42,7 +42,7 @@ public class Client {
         return currencies;
     }
 
-    public int getClientId() {
+    public String getClientId() {
         return clientId;
     }
 
