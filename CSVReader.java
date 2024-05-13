@@ -6,7 +6,7 @@ public class CSVReader{
     public Scanner sc;
 
     private void setScanner(String filename) throws Exception {
-        sc = new Scanner(new File("test-set/" + filename));
+        sc = new Scanner(new File(filename));
     }
     
     public Scanner parseCSV(String filename) {
